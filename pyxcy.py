@@ -1,13 +1,14 @@
 import Tkinter
+from Tkinter import Menu
 import ScrolledText
 
 root = Tkinter.Tk(className = "PyXCy")
 textpad = ScrolledText.ScrolledText(root, width = 100, height = 80)
 
-def dummy()
+def dummy():
 	print "Hello world"
 
-menu = Menu.root()
+menu = Menu(root)
 root.config(menu = menu)
 filemenu = Menu(menu)
 menu.add_cascade(label = "File", menu = filemenu)
