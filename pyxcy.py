@@ -7,7 +7,6 @@ import tkMessageBox
 
 root = Tk(className = "PyXCy")
 pyxcy = ScrolledText(root, width = 100, height = 80)
-done = 0;
 
 def open_command():
 	file = tkFileDialog.askopenfile(parent = root, mode = 'rb', title = 'Select a file')
@@ -65,9 +64,7 @@ helpmenu.add_command(label = "For", command = for_command)
 helpmenu.add_command(label = "By", command = by_command)
 helpmenu.add_command(label = "Documentation", command = documentation_command)
 
-#root.bind("hello", colorme)
-pyxcy.tag_configure('color', foreground='blue')
-pyxcy.insert(END, "This is blue\n", 'color')
+root.bind("hello", colorme)
 
 pyxcy.pack()
 root.mainloop()
